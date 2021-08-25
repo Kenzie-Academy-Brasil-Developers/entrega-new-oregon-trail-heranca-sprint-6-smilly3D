@@ -31,5 +31,5 @@ Funcionalidade: Hunter
         E o Hunter não ficará doente
 
     Cenário: Compartilha refeição caso tenha refeição suficiente
-        Quando o Hunter compartilhar 6 refeições
-        Então a quantidade de refeições deve ser igual a 2
+        Quando o Hunter compartilhar 1 refeição com "joão"
+        Então a quantidade de refeições é igual a 1

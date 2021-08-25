@@ -1,7 +1,7 @@
 const Traveler = require("./Traveler");
 
 class Hunter extends Traveler{
-        constructor(name,isHealthy,food = 2){
+        constructor(name,isHealthy = true,food = 2){
         super(name, isHealthy, food)
         this.name = name
         this.isHealthy = isHealthy
@@ -16,6 +16,12 @@ class Hunter extends Traveler{
             this.isHealthy = false
             this.food = 0
         }
+    }
+    giveFood(traveler, numOfFoodUnits){
+        if (this.food >= numOfFoodUnits){
+        this.food--
+        traveler.food+= numOfFoodUnits
+    }
     }
 }
 

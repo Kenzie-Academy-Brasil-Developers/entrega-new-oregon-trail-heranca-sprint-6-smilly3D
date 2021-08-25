@@ -2,6 +2,7 @@ const { Given, When, Then } = require("@cucumber/cucumber");
 const assert = require("assert");
 const { Console } = require("console");
 
+const Traveler = require("../../models/Traveler")
 const { hunter } = require("../../app");
 
 Given('um Hunter de nome {string}', function (string) {
@@ -42,4 +43,9 @@ Then('o Hunter não ficará doente', function () {
 
 Then('o Hunter ficará doente', function () {
     assert.strictEqual(hunter.isHealthy, false)
+});
+
+When('o Hunter compartilhar {int} refeição com {string}', function (int, string) {
+    let viajante = new Traveler(string)
+    hunter.giveFood(viajante, int)
 });
