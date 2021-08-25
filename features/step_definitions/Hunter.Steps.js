@@ -1,6 +1,6 @@
 const { Given, When, Then } = require("@cucumber/cucumber");
 const assert = require("assert");
-const { Console } = require("console");
+
 
 const Traveler = require("../../models/Traveler")
 const { hunter } = require("../../app");
